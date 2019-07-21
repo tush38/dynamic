@@ -117,7 +117,7 @@
     "nodemon": "^1.19.1"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
