@@ -8,7 +8,7 @@ var p = "";
 var out = "";
 var pb = fs.readFileSync("template_product.html");
 p = p + pb;
-console.log(p);
+// console.log(p);
 var cards = fs.readFileSync("template_card.html");
 var over = fs.readFileSync("template_overview.html");
 const server = http
@@ -32,7 +32,7 @@ const server = http
       if (jsondata[daal]["organic"] === false) {
         op = op.replace(/{%NOT-ORGANIC%}/g, "not-organic");
       }
-      console.log(op);
+      // console.log(op);
       res.end(op);
     } else if (path === "/" || path === "/overview" || path === "/home") {
       var c = "";
@@ -63,5 +63,5 @@ const server = http
     }
   });
   var port = process.env.PORT||80;
-  server.listen(3000);
+  server.listen(port);
 // console.log("Server has started on port "+port);
